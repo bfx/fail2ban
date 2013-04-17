@@ -353,7 +353,7 @@ class Server:
 			formatter = logging.Formatter("%(asctime)s %(name)-16s: %(levelname)-6s %(message)s")
 			if target == "SYSLOG":
 				# Syslog daemons already add date to the message.
-				formatter = logging.Formatter("%(name)-16s: %(levelname)-6s %(message)s")
+				#formatter = logging.Formatter("%(name)-16s: %(levelname)-6s %(message)s")
 				facility = logging.handlers.SysLogHandler.LOG_DAEMON
 				hdlr = logging.handlers.SysLogHandler("/dev/log", 
 													  facility = facility)
